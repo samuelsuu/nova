@@ -53,6 +53,13 @@ header {
   color: var(--red);
   cursor: pointer;
 }
+.log i {
+  font-size: 1.5rem; /* Adjust size as needed */
+  color: var(--red); /* Color to match your theme */
+  margin-right: 0.5rem; /* Spacing between icon and text */
+  cursor: pointer;
+}
+
 .nav {
   display: flex;
   gap: 8rem;
@@ -129,23 +136,83 @@ header {
   border: none;
   margin: 20px auto;
 }
+.social-icons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 20px;
+}
 
+.social-icons a {
+  color: white;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
 
+.social-icons a:hover {
+  color: var(--red); /* Changes to red on hover */
+}
 
 
 /* about section */
-.about{
+.about {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin: 80px 60px;
   gap: 2rem;
+  padding: 40px;
+  background-color: #f8f9fa; /* Light background for contrast */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
 }
-.about h2{
-  font-size: 35px;
-  line-height: 40px;
-  margin-bottom: 20px;
+
+.about1 {
+  max-width: 60%; /* Limits text width for readability */
+  color: #333;
 }
-.about1 p{
-  line-height: 30px;
-  font-size: 20px;
+
+.about h2 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: var(--black);
+}
+
+.about1 p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+  color: #555; /* Softer color for text */
+}
+
+.list {
+  margin-top: 25px;
+}
+
+.list b {
+  font-size: 1.2rem;
+  color: var(--black);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.list ul {
+  padding-left: 1.5rem;
+  list-style-type: disc;
+}
+
+.list ul li {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.5;
+  margin: 0.5rem 0;
+}
+
+/* Image styling */
+.about img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for image */
 }
