@@ -1,0 +1,372 @@
+:root {
+  --red: rgb(226, 60, 60);
+  --black: rgb(18, 18, 18);
+  --ash: rgb(36,37,42);
+  --white:  rgb(255, 255, 255);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+}
+a:hover {
+  color: var(--red);
+}
+.cv {
+  background-color: var(--red);
+  padding: 10px 30px;
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+.cv:hover {
+  background-color: var(--black);
+  color: var(--red);
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--black);
+  color: white;
+  padding: 30px 70px 30px 10px; /* Adjusted padding for a smaller height */
+  border-bottom: 2px solid white;
+  font-weight: 500;
+  position: fixed; /* Makes the header fixed on top */
+  top: 0;          /* Aligns it to the top of the viewport */
+  width: 100%;     /* Ensures it spans the full width of the viewport */
+  z-index: 10;     /* Ensures it's on top of other elements */
+}
+.log{
+  color: var(--red);
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.log img{
+  height: 30px;
+  color: var(--red);
+  cursor: pointer;
+}
+.log i {
+  font-size: 1.5rem; /* Adjust size as needed */
+  color: var(--red); /* Color to match your theme */
+  margin-right: 0.5rem; /* Spacing between icon and text */
+  cursor: pointer;
+}
+
+.nav {
+  display: flex;
+  gap: 8rem;
+}
+.nav2{
+  gap: 3rem;
+  display: flex;
+}
+
+
+
+/* Hero Section */
+.hero {
+  margin-top: 100px; /* Adds spacing at the top to prevent hero from going under header */
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px;
+}
+
+.hero_video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Dark overlay for the video */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Adjust opacity to control darkness */
+  z-index: 0;
+}
+
+.hero_text {
+  position: relative;
+  color: white;
+  line-height: 1.5;
+  text-align: center;
+  font-size: 2rem;
+  max-width: 100%;
+  z-index: 1;
+}
+
+.hero_text h2 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero_text p {
+  font-size: 1.5rem;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.hero_text input {
+  padding: 12px;
+  width: 80%;
+  max-width: 500px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  margin: 20px auto;
+}
+.social-icons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: var(--red); /* Changes to red on hover */
+}
+
+
+/* about section */
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 80px 60px;
+  gap: 2rem;
+  padding: 40px;
+  background-color: #f8f9fa; /* Light background for contrast */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+}
+
+.about1 {
+  max-width: 60%; /* Limits text width for readability */
+  color: #333;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: var(--black);
+}
+
+.about1 p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+  color: #555; /* Softer color for text */
+}
+
+.list {
+  margin-top: 25px;
+}
+
+.list b {
+  font-size: 1.2rem;
+  color: var(--black);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.list ul {
+  padding-left: 1.5rem;
+  list-style-type: disc;
+}
+
+.list ul li {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.5;
+  margin: 0.5rem 0;
+}
+
+/* Image styling */
+.about img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for image */
+}
+/* banner section */
+.banner{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  background-color: var(--ash);
+  color: var(--white);
+  padding: 60px 100px;
+}
+.req{
+  background-color: var(--red);
+  padding: 20px 50px;
+  border-radius: 10px;
+  font-size: 15px;
+}
+.re{
+  font-size: 30px;
+  text-align: center;
+}
+.banner2 {
+  position: relative;
+  text-align: center;
+  padding: 50px 20px;
+  color: var(--black);
+  overflow: hidden;
+  border-radius: 8px;
+  margin-top: 40px;
+}
+
+.banner_video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.overlay {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.8); /* White overlay with 80% opacity */
+  padding: 50px;
+  border-radius: 8px;
+}
+
+.banner2 h2 {
+  font-size: 36px;
+  font-weight: bold;
+  color: var(--black);
+  margin-bottom: 20px;
+}
+
+.ban {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px 20px;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.ban div {
+  text-align: center;
+  max-width: 300px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.ban div:hover {
+  transform: scale(1.05);
+}
+
+.ban img {
+  width: 80px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.ban h2 {
+  font-size: 24px;
+  color: var(--red);
+  margin-bottom: 10px;
+}
+.bann{
+  cursor: pointer;
+}
+.ban p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--black);
+}
+
+
+/* servies */
+.service {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px;
+  justify-content: space-between;
+}
+
+.service div {
+  flex: 1 1 calc(50% - 20px); /* Each item takes 50% width with spacing */
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.service div:hover {
+  transform: scale(1.05);
+}
+
+.service h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: var(--red);
+}
+
+.service p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+
+.banner3{
+  background-color: var(--black);
+  text-align: center;
+  color: var(--white);
+  padding: 50px 80px;
+  line-height: 70px;
+  margin: 0px 50px 20px;
+}
+.banner3 p{
+  font-size: 30px;
+}
+.banner3 a{
+  background-color: var(--white);
+  color: var(--black);
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
