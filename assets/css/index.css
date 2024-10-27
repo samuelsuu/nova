@@ -1,8 +1,8 @@
 :root {
   --red: rgb(226, 60, 60);
   --black: rgb(18, 18, 18);
-  --ash: rgb(36,37,42);
-  --white:  rgb(255, 255, 255);
+  --ash: rgb(36, 37, 42);
+  --white: rgb(255, 255, 255);
 }
 
 * {
@@ -16,9 +16,11 @@ a {
   color: rgb(255, 255, 255);
   font-size: 20px;
 }
+
 a:hover {
   color: var(--red);
 }
+
 .cv {
   background-color: var(--red);
   padding: 10px 30px;
@@ -26,48 +28,100 @@ a:hover {
   text-transform: uppercase;
   font-size: 15px;
 }
+
 .cv:hover {
   background-color: var(--black);
   color: var(--red);
 }
+
+/* Basic header and nav styling */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: var(--black);
   color: white;
-  padding: 30px 70px 30px 10px; /* Adjusted padding for a smaller height */
+  padding: 20px 70px 20px 0px;
   border-bottom: 2px solid white;
   font-weight: 500;
-  position: fixed; /* Makes the header fixed on top */
-  top: 0;          /* Aligns it to the top of the viewport */
-  width: 100%;     /* Ensures it spans the full width of the viewport */
-  z-index: 10;     /* Ensures it's on top of other elements */
-}
-.log{
-  color: var(--red);
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
-.log img{
-  height: 30px;
-  color: var(--red);
-  cursor: pointer;
-}
-.log i {
-  font-size: 1.5rem; /* Adjust size as needed */
-  color: var(--red); /* Color to match your theme */
-  margin-right: 0.5rem; /* Spacing between icon and text */
-  cursor: pointer;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
 }
 
 .nav {
   display: flex;
   gap: 8rem;
 }
-.nav2{
+
+.nav2 {
+  display: flex;
   gap: 3rem;
+}
+
+.cv {
+  background-color: var(--red);
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.log {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.log i {
+  font-size: 1.5rem;
+  color: var(--red);
+}
+
+/* Mobile Responsive Styles */
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Hide menu items on mobile */
+@media (max-width: 768px) {
+  .nav .menu {
+    display: none;
+    /* Initially hide menu on mobile */
+    flex-direction: column;
+    background-color: var(--black);
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 9;
+  }
+
+  .nav .menu a {
+    display: block;
+    padding: 15px 0;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 2.5rem;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+/* Default state for the menu toggle icon on desktop */
+.menu-toggle {
+  display: none;
+}
+
+.menu.active {
   display: flex;
 }
 
@@ -75,7 +129,8 @@ header {
 
 /* Hero Section */
 .hero {
-  margin-top: 100px; /* Adds spacing at the top to prevent hero from going under header */
+  margin-top: 100px;
+  /* Adds spacing at the top to prevent hero from going under header */
   position: relative;
   width: 100%;
   height: 85vh;
@@ -104,7 +159,8 @@ header {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6); /* Adjust opacity to control darkness */
+  background-color: rgba(0, 0, 0, 0.6);
+  /* Adjust opacity to control darkness */
   z-index: 0;
 }
 
@@ -138,6 +194,7 @@ header {
   border: none;
   margin: 20px auto;
 }
+
 .social-icons {
   display: flex;
   gap: 1.5rem;
@@ -152,11 +209,80 @@ header {
 }
 
 .social-icons a:hover {
-  color: var(--red); /* Changes to red on hover */
+  color: var(--red);
+  /* Changes to red on hover */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .hero {
+    height: 75vh;
+    /* Reduce height for smaller screens */
+    padding: 20px;
+  }
+
+  .hero_text {
+    font-size: 1.5rem;
+    /* Smaller font size for mobile */
+  }
+
+  .hero_text h2 {
+    font-size: 2.5rem;
+    /* Adjust header size for mobile */
+  }
+
+  .hero_text h5 {
+    font-size: 1.2rem;
+    /* Smaller font size for subtitle */
+  }
+
+  .hero_text p {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+
+  .hero_text input {
+    padding: 10px;
+    width: 90%;
+    /* Full width on mobile */
+  }
+
+  .social-icons a {
+    font-size: 1.2rem;
+    /* Smaller icon size for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 65vh;
+    padding: 15px;
+  }
+
+  .hero_text {
+    font-size: 1.2rem;
+  }
+
+  .hero_text h2 {
+    font-size: 2rem;
+  }
+
+  .hero_text p {
+    font-size: 0.9rem;
+  }
+
+  .hero_text input {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  .social-icons a {
+    font-size: 1rem;
+  }
 }
 
 
-/* about section */
+/* About Section */
 .about {
   display: flex;
   justify-content: space-between;
@@ -164,13 +290,16 @@ header {
   margin: 80px 60px;
   gap: 2rem;
   padding: 40px;
-  background-color: #f8f9fa; /* Light background for contrast */
+  background-color: #f8f9fa;
+  /* Light background for contrast */
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  /* Adds subtle shadow */
 }
 
 .about1 {
-  max-width: 60%; /* Limits text width for readability */
+  max-width: 60%;
+  /* Limits text width for readability */
   color: #333;
 }
 
@@ -185,7 +314,8 @@ header {
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 1.2rem;
-  color: #555; /* Softer color for text */
+  color: #555;
+  /* Softer color for text */
 }
 
 .list {
@@ -216,10 +346,79 @@ header {
   width: 100%;
   max-width: 450px;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for image */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  /* Shadow for image */
 }
-/* banner section */
-.banner{
+
+/* Mobile Responsiveness */
+@media (max-width: 992px) {
+  .about {
+    flex-direction: column;
+    padding: 30px;
+    margin: 50px 20px;
+  }
+
+  .about1 {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .about h2 {
+    font-size: 2rem;
+  }
+
+  .about1 p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .list b {
+    font-size: 1.1rem;
+  }
+
+  .list ul li {
+    font-size: 0.95rem;
+  }
+
+  .about img {
+    max-width: 300px;
+    /* Adjusted max width for smaller screens */
+    margin-top: 20px;
+    /* Adds space between text and image */
+  }
+}
+
+@media (max-width: 576px) {
+  .about {
+    padding: 20px;
+    margin: 40px 10px;
+  }
+
+  .about h2 {
+    font-size: 1.8rem;
+  }
+
+  .about1 p {
+    font-size: 0.9rem;
+  }
+
+  .list b {
+    font-size: 1rem;
+  }
+
+  .list ul li {
+    font-size: 0.9rem;
+  }
+
+  .about img {
+    max-width: 100%;
+    /* Full width image on smallest screens */
+  }
+}
+
+
+/* Banner Section */
+.banner {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -228,16 +427,54 @@ header {
   color: var(--white);
   padding: 60px 100px;
 }
-.req{
+
+.req {
   background-color: var(--red);
   padding: 20px 50px;
   border-radius: 10px;
   font-size: 15px;
+  text-align: center;
 }
-.re{
+
+.re {
   font-size: 30px;
   text-align: center;
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .banner {
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 20px;
+    /* Adds space between elements when stacked */
+  }
+
+  .req {
+    padding: 15px 30px;
+    font-size: 14px;
+  }
+
+  .re {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner {
+    padding: 30px 10px;
+  }
+
+  .req {
+    padding: 12px 25px;
+    font-size: 13px;
+  }
+
+  .re {
+    font-size: 20px;
+  }
+}
+
 .banner2 {
   position: relative;
   text-align: center;
@@ -261,7 +498,8 @@ header {
 .overlay {
   position: relative;
   z-index: 1;
-  background-color: rgba(255, 255, 255, 0.8); /* White overlay with 80% opacity */
+  background-color: rgba(255, 255, 255, 0.8);
+  /* White overlay with 80% opacity */
   padding: 50px;
   border-radius: 8px;
 }
@@ -306,17 +544,98 @@ header {
   color: var(--red);
   margin-bottom: 10px;
 }
-.bann{
+
+.bann {
   cursor: pointer;
 }
+
 .ban p {
   font-size: 18px;
   line-height: 1.5;
   color: var(--black);
 }
 
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .banner2 {
+    padding: 30px 10px;
+    /* Reduced padding for mobile */
+  }
 
-/* servies */
+  .overlay {
+    padding: 30px;
+    /* Adjust overlay padding */
+  }
+
+  .banner2 h2 {
+    font-size: 28px;
+    /* Smaller header on mobile */
+  }
+
+  .ban {
+    flex-direction: column;
+    /* Stack items vertically */
+    align-items: center;
+    /* Center align */
+  }
+
+  .ban div {
+    max-width: 90%;
+    /* Full width on smaller screens */
+    margin: 10px 0;
+    /* Margin between items */
+  }
+
+  .ban img {
+    width: 60px;
+    /* Smaller images on mobile */
+  }
+
+  .ban h2 {
+    font-size: 20px;
+    /* Smaller headings on mobile */
+  }
+
+  .ban p {
+    font-size: 16px;
+    /* Smaller text on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .banner2 {
+    padding: 20px 5px;
+    /* Further reduced padding for smaller devices */
+  }
+
+  .overlay {
+    padding: 20px;
+    /* Further adjust overlay padding */
+  }
+
+  .banner2 h2 {
+    font-size: 24px;
+    /* Even smaller header for small screens */
+  }
+
+  .ban img {
+    width: 50px;
+    /* Further reduced image size */
+  }
+
+  .ban h2 {
+    font-size: 18px;
+    /* Smaller heading on very small screens */
+  }
+
+  .ban p {
+    font-size: 14px;
+    /* Smaller text for readability */
+  }
+}
+
+
+/* Services Section */
 .service {
   display: flex;
   flex-wrap: wrap;
@@ -326,7 +645,8 @@ header {
 }
 
 .service div {
-  flex: 1 1 calc(50% - 20px); /* Each item takes 50% width with spacing */
+  flex: 1 1 calc(50% - 20px);
+  /* Each item takes 50% width with spacing */
   background-color: #f5f5f5;
   padding: 20px;
   border-radius: 8px;
@@ -350,23 +670,106 @@ header {
   color: #333;
 }
 
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .service {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
 
-.banner3{
+  .service div {
+    flex: 1 1 100%;
+    /* Full width on mobile */
+    padding: 20px 15px;
+    /* Adjust padding for smaller screens */
+  }
+
+  .service h1 {
+    font-size: 22px;
+  }
+
+  .service p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .service {
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .service div {
+    padding: 15px 10px;
+  }
+
+  .service h1 {
+    font-size: 20px;
+  }
+
+  .service p {
+    font-size: 14px;
+  }
+}
+
+
+.banner3 {
   background-color: var(--black);
   text-align: center;
   color: var(--white);
   padding: 50px 80px;
-  line-height: 70px;
+  line-height: 1.6;
   margin: 0px 50px 20px;
 }
-.banner3 p{
+
+.banner3 p {
   font-size: 30px;
 }
-.banner3 a{
+
+.banner3 a {
   background-color: var(--white);
   color: var(--black);
   padding: 12px 22px;
   border-radius: 10px;
   font-size: 14px;
+  text-decoration: none;
 }
 
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .banner3 {
+    padding: 30px 20px;
+    /* Reduced padding for smaller screens */
+    margin: 0px 20px 20px;
+    /* Smaller margins on mobile */
+  }
+
+  .banner3 p {
+    font-size: 22px;
+    /* Smaller font for readability */
+    line-height: 1.4;
+  }
+
+  .banner3 a {
+    padding: 10px 20px;
+    /* Adjusted padding for button */
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner3 {
+    padding: 20px 15px;
+    margin: 0px 15px 15px;
+  }
+
+  .banner3 p {
+    font-size: 20px;
+  }
+
+  .banner3 a {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+}
