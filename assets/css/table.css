@@ -1,0 +1,92 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #f4f4f4;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.status .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.status.online .dot {
+  background-color: green;
+}
+
+.status.offline .dot {
+  background-color: red;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.buttons button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.success {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.error {
+  background-color: #f44336;
+  color: white;
+}
+
+.option {
+  background-color: #008CBA;
+  color: white;
+}
+
+.delete {
+  background-color: #f44336;
+  color: white;
+}
+.btt{
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+.buttons{
+    display: flex;
+    flex-direction: column;
+}
+.page{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+.page button{
+    padding: 5px 10px;
+    cursor: pointer;
+}
