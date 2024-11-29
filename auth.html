@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f2f5;
+        }
+
+        section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            margin: 0px 400px;
+        }
+
+        .top {
+            background: white;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+
+        p {
+            font-size: 16px;
+            color: #555;
+            margin: 10px 0;
+        }
+
+        img {
+            margin: 20px 0;
+            max-width: 100%; /* Ensures image scales properly */
+            height: auto;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #1877f2;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px 5px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #145dbf;
+        }
+
+        button:last-of-type {
+            background-color: #e0e0e0;
+            color: #555;
+        }
+
+        button:last-of-type:hover {
+            background-color: #c8c8c8;
+        }
+
+        .but {
+            text-align: center;
+        }
+
+        .retry-container {
+            display: flex;
+            gap: 8px; /* Space between icon and text */
+            align-items: center;
+            
+        }
+
+        .retry-container .fas.fa-redo {
+            font-size: 16px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="top">
+            <p>{{First Name}} | Facebook</p>
+            <h2>Check your text messages</h2>
+            <p>Enter the code we sent to your phone.</p>
+            <img src="./assets/image.png" alt="Verification Illustration">
+            <input type="text" name="code" id="code" placeholder="Code">
+            <div class="retry-container">
+                <i class="fas fa-redo"></i>
+                <p>We can send a new code in 2:47</p>
+                
+            </div>
+
+            <div class="but">
+                <button>Continue</button><br>
+                <button>Try another way</button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Login Approval</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f2f5;
+        }
+
+        section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            margin: 0 20px; /* Reduced margin for better responsiveness */
+        }
+
+        .top {
+            background: white;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            max-width: 400px; /* Ensures content doesn't stretch too wide */
+        }
+
+        h2 {
+            font-size: 22px;
+            margin: 15px 0;
+        }
+
+        p {
+            font-size: 16px;
+            color: #555;
+            margin: 10px 0;
+        }
+
+        img {
+            margin: 20px 0;
+            max-width: 100%; /* Ensures image scales properly */
+            height: auto;
+        }
+
+        button {
+            background-color: #1877f2;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            margin: 15px 0;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%; /* Makes buttons stretch evenly */
+        }
+
+        button:hover {
+            background-color: #145dbf;
+        }
+
+        button:last-of-type {
+            background-color: #e0e0e0;
+            color: #555;
+        }
+
+        button:last-of-type:hover {
+            background-color: #c8c8c8;
+        }
+
+        .notification {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .dots-icon {
+            margin: 20px 0;
+            width: 30px;
+            height: 20px;
+            border: 2px solid #555;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .dot {
+            width: 5px;
+            height: 5px;
+            background-color: #555;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        .dot:nth-child(1) {
+            top: 50%;
+            left: 25%;
+            transform: translate(-50%, -50%);
+        }
+
+        .dot:nth-child(2) {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .dot:nth-child(3) {
+            top: 50%;
+            left: 75%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="top">
+            <p><b>{{First Name}} | Facebook</b></p>
+            <h2>Check Your Notifications on Another Device</h2>
+            <p>We sent a notification to your device. Check your Facebook notifications there and approve the login to continue.</p>
+            <img src="./assets/imag.svg" alt="Verification Illustration">
+            
+            <div class="notification">
+                <p><b>Waiting for Approval</b> <br>It may take a few minutes to get the notification on your other device.</p>
+                <div class="dots-icon">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+
+            <div>
+                <button>Try Another Way</button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
